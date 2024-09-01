@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive W3.CSS Design</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      color: #333;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    header {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+    .features {
+      display: flex; /* Flexbox applied for layout */
+      flex-wrap: wrap;
+      justify-content: space-around;
+      margin-top: 20px;
+    }
+    .feature {
+      flex-basis: 100%;
+      text-align: center;
+      padding: 20px;
+      margin-bottom: 20px;
+      background-color: #f4f4f4;
+      border-radius: 5px;
+    }
+    .feature img {
+      width: 50px;
+      height: 50px;
+      margin-bottom: 10px;
+    }
+    .cta-button {
+      display: inline-block;
+      background-color: #333;
+      color: white;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 5px;
+      margin-top: 10px;
+    }
+    
+    /* Breakpoint for screen width 480px and up */
+    @media screen and (min-width: 480px) {
+      .feature {
+        flex-basis: calc(50% - 20px); /* Flexbox adjustment for 2 columns layout */
+      }
+    }
+    
+    /* Breakpoint for screen width 900px and up */
+    @media screen and (min-width: 900px) {
+      .feature {
+        flex-basis: calc(33.33% - 20px); /* Flexbox adjustment for 3 columns layout */
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>BUILT WITH W3.CSS</h1>
+      <a href="https://websim.io/learn-w3css" class="cta-button">acceso a la pagina.CSS</a>
+    </header>
+    
+    <div class="features">
+      <div class="feature">
+        <img src="imagen1.png" alt="Desktop computer icon">
+        <h2>Responsive</h2>
+        <p>Built-in responsiveness</p>
+        <p>Mobile first fluid grid</p>
+        <p>Fits any screen sizes</p>
+        <p>PC Tablet and Mobile</p>
+      </div>
+      
+      <div class="feature">
+        <img src="imagen2.png" alt="CSS3 icon">
+        <h2>Standard CSS</h2>
+        <p>Standard CSS only</p>
+        <p>Easy to learn</p>
+        <p>No need for jQuery</p>
+        <p>No JavaScript library</p>
+      </div>
+      
+      <div class="feature">
+        <img src="imagen3.png" alt="Diamond icon">
+        <h2>Design</h2>
+        <p>Paper like design</p>
+        <p>Bold colors and shadows</p>
+        <p>Equal across platforms</p>
+        <p>Equal across devices</p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    window.addEventListener('resize', function() {
+      document.body.style.display = 'none';
+      document.body.offsetHeight;
+      document.body.style.display = '';
+    });
+  </script>
+</body>
+</html>
