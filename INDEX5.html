@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estructura Grid con Flexbox</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column; /* Apilar elementos verticalmente */
+            align-items: center; /* Centrar horizontalmente */
+            height: 100vh; /* Altura del viewport */
+            margin: 0; /* Eliminar márgenes  */
+            padding: 0; /* Eliminar padding  */
+            box-sizing: border-box; /* Incluir padding y border en el tamaño total del elemento */
+            background-color: rgb(233, 208, 139);
+        }
+        .header {
+            text-align: left; 
+            margin-bottom: 20px; /* Espacio debajo del header */
+            padding: 0 20px; /* Espacio lateral  */
+            max-width: 100%; /* Asegura que el padding no cause desbordamiento */
+            box-sizing: border-box; /* Incluir padding en el tamaño total del elemento */
+            font-family: Georgia, 'Times New Roman', Times, serif; 
+
+        }
+
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr); 
+            grid-template-rows: repeat(7, 100px); 
+            gap: 10px; 
+            margin: 0 auto; 
+        }
+        .item img {
+            width: 90%;
+            height: 90%;
+            object-fit: contain; /*para que la imagen no se recorte */
+           
+        }
+
+        .item {
+            border: 2px solid rgb(48, 47, 47);
+           
+            display: flex; /* Activar Flexbox */
+            justify-content: center; 
+            align-items: center; 
+            background-color: rgb(189, 186, 186);
+        }
+
+        .item1 {
+            grid-column: 1/ 3;
+            grid-row: 1/ 3;
+            
+        }
+
+        .item2 {
+            grid-column: 3/ 4;
+            grid-row: 1/ 2;
+           
+        }
+
+        .item3 {
+            grid-column: 3 / 4;
+            grid-row: 2 / 3;
+           
+        }
+
+        .item4 {
+            grid-column: 1/ 2;
+            grid-row: 3/ 4;
+           
+        }
+
+        .item5 {
+            grid-column: 1 / 2;
+            grid-row: 4 / 5;
+            
+        }
+
+        .item6 {
+            grid-column: 2/ 4;
+            grid-row: 3 / 5;
+            
+        }
+        .item7 {
+            grid-column: 1/ 3;
+            grid-row: 5 / 7;
+           
+        }
+        .item8 {
+            grid-column: 3/ 4;
+            grid-row: 5 / 6;
+           
+        }
+        .item9 {
+            grid-column: 3/ 4;
+            grid-row: 6 / 7;
+           
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>BIENVENIDO A OUTFITTER</h1>
+        <p>Bienvenidos, te ofrecemos ropa y accesorios con estilo y calidad. Encuentra piezas únicas que se adapten a tu vida diaria y dale un toque especial a tu guardarropa. ¡Descubre lo mejor en moda con nosotros! </p>
+    </div>
+ 
+    <div class="grid-container">
+        <div class="item item1"><img src="botas1.jpg" alt="imagen 1" ></div>
+        <div class="item item2"><img src="short.jpg" alt="imagen 2" ></div>
+        <div class="item item3"><img src="chaleco1.jpg" alt="imagen 3" ></div>
+        <div class="item item4"><img src="short verde.png" alt="imagen 4" ></div>
+        <div class="item item5"><img src="chaleco rojo.png" alt="imagen 5" ></div>
+        <div class="item item6"><img src="correa.jpg" alt="imagen 6" ></div>
+        <div class="item item7"><img src="camisa.jpg" alt="imagen 7" ></div>
+        <div class="item item8"><img src="botas agua.jpg" alt="imagen 8" ></div>
+        <div class="item item9"><img src="mochila.jpg" alt="imagen 9" ></div>
+    </div>
+</body>
+</html>
